@@ -1,0 +1,124 @@
+*, *::before, *::after {
+    /* border box includes the whole element (box model box!) */
+    box-sizing: border-box; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+
+    /* this is a css custom property */
+    --accent-dark: #BB4C3A;
+    --accent-light: #fdd39c;
+}
+
+body {
+    /* viewport units, vh = height of window vw = width of window vmin = width, 
+    looks at both values
+    and chooses at whichever is smaller */
+    margin: 0;
+    background: #ECD8B2;
+    height:  100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+header {
+    font-size: 5vmin;
+    padding: .5vmin;
+    background-color: var(--accent-dark);
+    color:white;
+    text-align:center;
+    letter-spacing: .5vmin;
+}
+
+main {
+
+    /* Automatically centers everythin in main element */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+
+    /* Automatically centers everythin in main element */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0vmin;
+}
+
+section button {
+    margin: 1vmin;
+    flex-wrap: wrap;
+    font-size: 4vmin;
+    width: 6vmin;
+    height: 6vmin;
+    outline: none;
+    border: 2px solid rgba(25,25, 25, .2);
+    border-radius: 7px;
+    transition: all .1s ease-in-out
+
+}
+
+button:active {
+    border-radius: 15px;
+    transform: scale(.7);
+  
+
+}
+#replay:active {
+    border-radius: 15px;
+    transform: scale(.9);
+  
+
+}
+
+
+#replay {
+
+    color: grey;
+    outline: none;
+    height: 4vmin;
+    width: 25vmin;
+    font-size: 1vmin;
+    border-radius: 5px;;
+    transition: all .2s;
+    visibility:hidden;
+}
+
+#msg {
+    font-size: 4.5vmin;
+    text-align: center;
+}
+
+#guess {
+    font-size:  5vmin;
+    letter-spacing: 2vmin;
+    color: grey;
+    text-align: center;
+}
+
+#gallows {
+    /* 20%of the height is 20 vmin */
+    width: 12vmin;
+    height: 32vmin;
+    background-image: url(../imgs/hangman.png);
+    background-size: cover;
+    transition: backgroundPositionX 2s;
+}
+
+button.valid-letter {
+    background-color: lightgreen;
+    color: grey;
+    cursor: not-allowed;
+}
+
+button.wrong-letter {
+    background-color: var(--accent-dark);
+    color: rgb(34,34,34);
+    cursor: not-allowed;
+}
+

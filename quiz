@@ -1,0 +1,33 @@
+1. mkdir ~/fridge/cakes mkdir ~/fridge/cakes
+2. cd vegetables && touch apple.txt lettuce.txt
+3. cd vegetables && mv apple.txt cabbage.txt
+4. cd vegetables && rm -rf cakes
+
+1. let doctor = 'JD'
+2. let phrase = `my favorite fictional doctor is named ${doctor}`
+
+1.if(milesPerGallon * gallonsLet < 100) {
+    console.log(`SOS!`)
+}
+
+1. weekend = [`Saturday`,`Monday`];
+2. weekend.push(`Sunday`);
+3. weekend.unshift(`Friday`);
+4  weekend.splice(2,1);
+5. const day = weekend[1]
+6. weekend.shift()
+
+1. let brain = {
+    energyLevel: 10
+}
+2. let energy = brain.energyLevel; 
+3. brain.dream = `electric sheep`;
+
+1. let computeArea(length,width) {
+    return length*width;
+}
+
+2. const area = computeArea(3,4)
+3. brain.eat() = function {
+    energyLevel += 2;
+}
